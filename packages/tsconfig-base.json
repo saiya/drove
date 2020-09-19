@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES2018",
+    "module": "commonjs",
+    "lib": ["es2016", "es2017", "es2019"],
+    "declaration": true,
+    "resolveJsonModule": true,
+    "strict": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "strictPropertyInitialization": false,
+    "incremental": true,
+  },
+  "exclude": [
+    "node_modules",
+    "**/*.spec.ts",
+  ]
+}

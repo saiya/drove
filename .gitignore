@@ -1,7 +1,8 @@
 /TODO.md
 
-/node_modules
+node_modules
+*.tsbuildinfo
 
-/out
-/report.*.json
-/yarn-error.log
+dist
+report.*.json
+yarn-error.log

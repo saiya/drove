@@ -2,5 +2,26 @@
   "name": "drove",
   "version": "0.0.1",
   "homepage": "https://github.com/saiya/drove",
-  "private": false
+  "private": true,
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/saiya/drove"
+  },
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "publish": "lerna publish --conventional-commits",
+    "test": "lerna run --parallel --stream test",
+    "build": "lerna run --stream build"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*",
+      "packages/@drove/*"
+    ],
+    "nohoist": []
+  },
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  }
 }
