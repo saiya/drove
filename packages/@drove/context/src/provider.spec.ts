@@ -1,29 +1,32 @@
 import { Provider } from "./provider";
 import { identity } from "@drove/ts-utils";
 
+const pluginA = Symbol("PluginA");
 type PluginA = {
-  type: "A";
+  type: typeof pluginA;
 }
+
+const pluginX = Symbol("PluginX");
 type PluginX = {
-  type: "X";
+  type: typeof pluginX;
 };
 
 describe("Provider", () => {
-  describe("empty", () => {
-    it("compiles", () => {
+  describe("compiles", () => {
+    it("empty", () => {
       identity<Provider<[], []>>({
+        readableName: "test",
         requires: [],
         offers: [],
-        init: () => [],
+        provide: () => { throw new Error("Not implemented"); },
       });
     });
-  });
-  describe("simple", () => {
-    it("compiles", () => {
+    it("simple", () => {
       identity<Provider<[ PluginA ], [ PluginX ]>>({
-        requires: [ "A" ],
-        offers: [ "X" ],
-        init: () => [ { type: "X" } ],
+        readableName: "test",
+        requires: [ pluginA ],
+        offers: [ pluginX ],
+        provide: () => { throw new Error("Not implemented"); },
       });
     });
   });

@@ -1,5 +1,5 @@
 {
-  "name": "@drove/context",
+  "name": "@drove/array-utils",
   "version": "0.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -14,12 +14,6 @@
     "compile": "tsc",
     "test": "jest",
     "test:watch": "jest --watch"
-  },
-  "dependencies": {
-    "@drove/ts-utils": "0.0.0",
-    "@drove/logger": "0.0.0",
-    "@drove/on-memory-cache": "0.0.0",
-    "@drove/dag": "0.0.0"
   },
   "devDependencies": {
     "@types/jest": "^26.0.14",

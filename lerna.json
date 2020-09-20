@@ -3,7 +3,7 @@
   "useWorkspaces": true,
   "packages": [
     "packages/*",
-    "packages/@drove"
+    "packages/@drove/*"
   ],
   "rejectCycles": "true",
   "version": "0.0.0"
