@@ -8,10 +8,8 @@
   ],
   "license": "BSD-3-Clause",
   "scripts": {
-    "prepublishOnly": "run-s build",
-    "build": "run-s clean compile",
-    "clean": "rm -rf ./dist",
-    "compile": "tsc",
+    "prepublishOnly": "npm run build",
+    "build": "rm -rf ./dist && tsc",
     "test": "jest",
     "test:watch": "jest --watch"
   },
@@ -41,5 +39,5 @@
       "node_modules"
     ]
   },
-  "gitHead": "eccc5b05d15f45fdee43b676831550d64bdd5ca1"
+  "gitHead": "cf42f3df0b902da256970c573b0ad0c354308ddc"
 }
