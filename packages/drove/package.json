@@ -1,6 +1,6 @@
 {
   "name": "drove",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -28,7 +28,7 @@
     "node": ">= 12.3.1"
   },
   "dependencies": {
-    "@drove/context": "^0.0.3"
+    "@drove/context": "^0.0.4"
   },
   "devDependencies": {
     "@types/jest": "^26.0.14",
