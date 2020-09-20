@@ -11,8 +11,8 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "publish-packages": "lerna publish --conventional-commits",
-    "test": "lerna run --parallel --stream test",
-    "build": "lerna run --stream build"
+    "build": "lerna run --stream build",
+    "test": "lerna run --stream test"
   },
   "workspaces": {
     "packages": [
