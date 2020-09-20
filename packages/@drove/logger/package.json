@@ -1,6 +1,6 @@
 {
   "name": "@drove/logger",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -14,7 +14,7 @@
     "test:watch": "jest --watch"
   },
   "dependencies": {
-    "@drove/ts-utils": "^0.0.5",
+    "@drove/ts-utils": "^0.0.6",
     "chalk": "^4.1.0",
     "dayjs": "^1.8.36"
   },
