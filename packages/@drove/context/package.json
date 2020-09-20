@@ -1,6 +1,6 @@
 {
   "name": "@drove/context",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -14,10 +14,10 @@
     "test:watch": "jest --watch"
   },
   "dependencies": {
-    "@drove/dag": "^0.0.4",
-    "@drove/logger": "^0.0.4",
-    "@drove/on-memory-cache": "^0.0.4",
-    "@drove/ts-utils": "^0.0.4"
+    "@drove/dag": "^0.0.5",
+    "@drove/logger": "^0.0.5",
+    "@drove/on-memory-cache": "^0.0.5",
+    "@drove/ts-utils": "^0.0.5"
   },
   "devDependencies": {
     "@types/jest": "^26.0.14",

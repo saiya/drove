@@ -1,6 +1,6 @@
 {
   "name": "@drove/dag",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -14,7 +14,7 @@
     "test:watch": "jest --watch"
   },
   "dependencies": {
-    "@drove/array-utils": "^0.0.4"
+    "@drove/array-utils": "^0.0.5"
   },
   "devDependencies": {
     "@types/jest": "^26.0.14",
