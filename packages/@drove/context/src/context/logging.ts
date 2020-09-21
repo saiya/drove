@@ -17,9 +17,3 @@ export const implementLogging = <T extends {}>(base: T, args: LoggingContextArgs
     captureLogs,
   };
 };
-
-declare module "../context" {
-  export interface Context extends LoggingContext {}
-
-  export interface ContextArgs extends LoggingContextArgs{}
-}

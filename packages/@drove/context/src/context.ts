@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from 'uuid';
-import { defaultInitializers } from "./context/default_initializers";
+import { defaultInitializers, DefaultContext, DefaultContextArgs } from "./context/default_initializers";
 
 type ContextCore = {
   readonly id: string;
@@ -15,10 +15,13 @@ type ContextCore = {
 /**
  * State of a user request (e.g. command line tool invocation, API request, ...).
  */
-export interface Context extends ContextCore { };  // Use interface for declaration merging
+export interface Context extends ContextCore, DefaultContext { };  // Use interface for declaration merging
 
-type ContextCoreArgs = {
+type ContextCoreArgs = DefaultContextArgs & {
   idPrefix?: string;
+
+  hostname?: string;
+  userName?: string;
 };
 const defaultIdPrefix = "ctx-";
 

@@ -1,0 +1,44 @@
+{
+  "name": "@drove/std-plugins",
+  "version": "0.0.7",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "license": "BSD-3-Clause",
+  "scripts": {
+    "prepublishOnly": "npm run build",
+    "build": "rm -rf ./dist && tsc",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "dependencies": {
+    "@drove/context": "^0.0.7",
+    "@drove/ts-utils": "^0.0.7"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.14",
+    "@types/uuid": "^8.3.0",
+    "jest": "^26.4.2",
+    "ts-jest": "^26.3.0",
+    "typescript": "^4.0.3"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.(t|j)sx?$": "ts-jest"
+    },
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "testPathIgnorePatterns": [
+      "node_modules"
+    ]
+  },
+  "gitHead": "5d5f9d0518390016fa39fbed28c4c16ae66abc72"
+}

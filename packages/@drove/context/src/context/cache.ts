@@ -10,7 +10,3 @@ export const implementCache = <T extends {}>(base: T): T & CacheContext => {
     cache: new OnMemoryCache(),
   };
 };
-
-declare module "../context" {
-  export interface Context extends CacheContext {}
-}

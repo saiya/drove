@@ -27,7 +27,3 @@ export const implementCancel = <T extends {}>(base: T): T & CancelContext => {
     },
   };
 };
-
-declare module "../context" {
-  export interface Context extends CancelContext {}
-}
