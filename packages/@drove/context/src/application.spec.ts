@@ -8,23 +8,23 @@ const initContextArgs: ContextArgs = {
   logger: () => {},
 };
 
-const a1 = Symbol("A1");
+const a1 = "test:a1";
 type PluginA1 = Plugin & { type: typeof a1 };
 const pluginA1: PluginA1 = { type: a1 };
 
-const b1 = Symbol("B1");
+const b1 = "test:b1";
 type PluginB1 = Plugin & { type: typeof b1 };
 const pluginB1: PluginB1 = { type: b1 };
 
-const b2 = Symbol("B2");
+const b2 = "test:b2";
 type PluginB2 = Plugin & { type: typeof b2 };
 const pluginB2: PluginB2 = { type: b2 };
 
-const b3 = Symbol("B3");
+const b3 = "test:b3";
 type PluginB3 = Plugin & { type: typeof b3 };
 const pluginB3: PluginB3 = { type: b3 };
 
-const c1 = Symbol("C1");
+const c1 = "test:c1";
 type PluginC1 = Plugin & { type: typeof c1 };
 const pluginC1: PluginC1 = { type: c1 };
 
@@ -78,7 +78,7 @@ describe("Application", () => {
       providers: {
         A: providerA, Ba: providerBa, C: providerC,
       },
-    }, initContextArgs)).rejects.toThrowError(/Required plugin\(s\) missing.*: Provider C \(C\) requires Symbol\(B2\) plugin/);
+    }, initContextArgs)).rejects.toThrowError(/Required plugin\(s\) missing.*: Provider C \(C\) requires test:b2 plugin/);
   });
 
   describe("duplicated plugin", () => {
@@ -93,7 +93,7 @@ describe("Application", () => {
             provide: async () => [ pluginA1 ],
           },
         },
-      }, initContextArgs)).rejects.toThrowError(/Plugin Symbol\(A1\) is provided by two providers X \(X\) and A \(A\)/);
+      }, initContextArgs)).rejects.toThrowError(/Plugin test:a1 is provided by two providers X \(X\) and A \(A\)/);
     });
 
     it("with priority", async () => {

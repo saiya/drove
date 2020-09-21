@@ -1,6 +1,6 @@
 import { ContextInitializer } from "./context";
 
-export type PluginType = symbol;
+export type PluginType = string;
 
 export type PluginTypesOfPlugins<T extends [...Plugin[]]> = {
   [i in keyof T]: T[i] extends Plugin ? T[i]["type"] : never;

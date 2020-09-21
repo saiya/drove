@@ -1,12 +1,12 @@
 import { Provider } from "./provider";
 import { identity } from "@drove/ts-utils";
 
-const pluginA = Symbol("PluginA");
+const pluginA = "test:pluginA";
 type PluginA = {
   type: typeof pluginA;
 }
 
-const pluginX = Symbol("PluginX");
+const pluginX = "test:pluginX";
 type PluginX = {
   type: typeof pluginX;
 };
