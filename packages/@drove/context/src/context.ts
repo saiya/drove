@@ -1,3 +1,4 @@
+import { v4 as uuidv4 } from 'uuid';
 import { defaultInitializers } from "./context/default_initializers";
 
 type ContextCore = {
@@ -30,7 +31,7 @@ export const newContext = (args: ContextArgs, initializers: ContextInitializer[]
 
   let closeHandlers: (() => Promise<void>)[] = [];
   const core: ContextCore = {
-    id: `${idPrefix}${nextId(args.idPrefix ?? idPrefix)}`,
+    id: `${idPrefix}${uuidv4().replace(/-/, "")}`,
     startAt: new Date(),
 
     close: async () => {
@@ -45,6 +46,3 @@ export const newContext = (args: ContextArgs, initializers: ContextInitializer[]
 
   return [ ...defaultInitializers, ...initializers ].reduce((c, init) => init(c, args), core as Context);
 };
-
-const idCounter: { [prefix: string]: number } = {};
-const nextId = (prefix: string): number => idCounter[prefix] = (idCounter[prefix] ?? 0) + 1;
